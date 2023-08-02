@@ -6,3 +6,8 @@ import '../styles/globals.css';
 export default function App({ Component, pageProps }) {
     return <Component {...pageProps} />
 }
+
+// console 에 내부 메트릭 표기. FID 트리거
+export function reportWebVitals(metric) {
+    console.log(metric);
+}
