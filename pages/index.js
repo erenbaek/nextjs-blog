@@ -1,11 +1,15 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout'
+import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
 
 export default function Home({ allPostsData }) {
+    console.log('Home!!');
+    console.log('NODE_ENV : ', process.env.NODE_ENV);
+    console.log('TZ : ', process.env.TZ);
+    console.log('NEXT_PUBLIC_ENV_KEY : ', process.env.NEXT_PUBLIC_ENV_KEY);
     
     return (
         <Layout home>
